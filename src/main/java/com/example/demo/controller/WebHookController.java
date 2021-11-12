@@ -17,7 +17,7 @@ public class WebHookController {
     private final TgService tgService;
 
     @PostMapping
-    public void getChanges(@RequestBody Update update){
+    public void getChanges(@RequestBody Update update) throws Exception{
         System.out.println(update);
         tgService.updateWait(update);
 
